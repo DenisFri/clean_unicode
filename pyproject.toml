@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clean_unicode"
+version = "0.1.0"
+description = "Remove non-ASCII (Unicode) characters from text files and Word documents."
+authors = [
+  { name="Denis Frishchin", email="denisfrishchin@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+dependencies = [
+  "python-docx>=0.8.11"
+]
+
+[project.scripts]
+clean_unicode = "clean_unicode.cli:main"
